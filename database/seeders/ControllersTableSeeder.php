@@ -88,28 +88,6 @@ class ControllersTableSeeder extends Seeder
             ),
             6 => 
             array (
-                'id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'controller_name' => 'Penyuluh',
-                'controller_desc' => 'controller untuk kelola data penyuluh',
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:02:53',
-                'updated_at' => '2022-02-06 09:02:53',
-            ),
-            7 => 
-            array (
-                'id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'controller_name' => 'Segments',
-                'controller_desc' => 'controller untuk mengelola  data segments',
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => 'admin',
-                'created_at' => '2022-02-06 09:03:16',
-                'updated_at' => '2022-02-06 09:06:03',
-            ),
-            8 => 
-            array (
                 'id' => '8c3697e8-6c90-464e-879e-bc2ff3f0f72b',
                 'controller_name' => 'Menugroups',
                 'controller_desc' => 'Controller untuk mengelola data menu group',
@@ -119,7 +97,7 @@ class ControllersTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:20:54',
                 'updated_at' => '2022-02-10 16:20:54',
             ),
-            9 => 
+            7 => 
             array (
                 'id' => 'c5927319-f5c2-4190-bc44-af9b5b64c952',
                 'controller_name' => 'Menus',
@@ -130,7 +108,7 @@ class ControllersTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:21:50',
                 'updated_at' => '2022-02-10 16:21:50',
             ),
-            10 => 
+            8 => 
             array (
                 'id' => 'a9ef3aba-5db4-4bd6-8d58-34874a5842e3',
                 'controller_name' => 'User',

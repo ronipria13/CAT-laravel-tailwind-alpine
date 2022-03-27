@@ -92,20 +92,6 @@ class ActionsTableSeeder extends Seeder
             ),
             5 => 
             array (
-                'id' => '6b335aa3-1781-4207-a1ee-7e51e69e887c',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'function_id' => 'a6b0e0ce-502b-4215-a138-676983b8ed6c',
-                'action_path' => 'App\\Http\\Controllers\\Data\\SegmentsController@update',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:33',
-                'updated_at' => '2022-02-06 09:04:33',
-            ),
-            6 => 
-            array (
                 'id' => '0796eaef-2e71-42d5-83a9-682c7a2bd673',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
                 'controller_id' => 'c5927319-f5c2-4190-bc44-af9b5b64c952',
@@ -118,21 +104,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:23:43',
                 'updated_at' => '2022-02-10 16:23:43',
             ),
-            7 => 
-            array (
-                'id' => '0fc47944-f224-40cc-9fe8-cdfdc6f77705',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'function_id' => '5a8d195f-c2f6-4a2d-a662-89a67a8eeb81',
-                'action_path' => 'App\\Http\\Controllers\\Data\\SegmentsController@show',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:33',
-                'updated_at' => '2022-02-06 09:04:33',
-            ),
-            8 => 
+            6 => 
             array (
                 'id' => '17dcf572-a236-4aef-8dc0-a6e0a72c43e9',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -146,21 +118,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-01-31 16:04:13',
                 'updated_at' => '2022-02-01 08:20:56',
             ),
-            9 => 
-            array (
-                'id' => '18c7da62-a93c-4c02-8b76-034e289d98b9',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'function_id' => '5a8d195f-c2f6-4a2d-a662-89a67a8eeb81',
-                'action_path' => 'App\\Http\\Controllers\\Data\\PenyuluhController@show',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:05',
-                'updated_at' => '2022-02-06 09:04:05',
-            ),
-            10 => 
+            7 => 
             array (
                 'id' => '191abd70-5092-4210-bcbb-0b6238522274',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -174,7 +132,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:22:17',
                 'updated_at' => '2022-02-10 16:22:17',
             ),
-            11 => 
+            8 => 
             array (
                 'id' => '27a0cf62-feb7-409e-8293-a1e8427aa933',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -188,7 +146,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:17:08',
                 'updated_at' => '2022-02-01 17:17:08',
             ),
-            12 => 
+            9 => 
             array (
                 'id' => '29b6f488-054a-48aa-a27f-c2fda7fb1142',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -202,7 +160,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:15:15',
                 'updated_at' => '2022-02-01 17:15:15',
             ),
-            13 => 
+            10 => 
             array (
                 'id' => '30312482-9cc1-41be-95cd-1f7b5e444ff3',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -216,7 +174,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-05 02:19:35',
                 'updated_at' => '2022-02-05 02:19:35',
             ),
-            14 => 
+            11 => 
             array (
                 'id' => '47b4fe27-2c5f-421c-8962-27419b0a3f5c',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -230,7 +188,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:22:46',
                 'updated_at' => '2022-02-10 16:22:46',
             ),
-            15 => 
+            12 => 
             array (
                 'id' => '533f185b-2596-43a9-befd-61f4a39bfcd1',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -244,7 +202,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:15:15',
                 'updated_at' => '2022-02-01 17:15:15',
             ),
-            16 => 
+            13 => 
             array (
                 'id' => '58c0dfe3-e3ce-42f0-8458-561772f2ad11',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -258,7 +216,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:23:11',
                 'updated_at' => '2022-02-10 16:23:11',
             ),
-            17 => 
+            14 => 
             array (
                 'id' => '6029c8eb-9d58-45c7-8018-34bc92447d12',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -272,7 +230,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2022-02-01 08:20:14',
             ),
-            18 => 
+            15 => 
             array (
                 'id' => '61043b31-c667-4854-a06d-f87a293215f5',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -286,7 +244,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2022-02-01 08:20:14',
             ),
-            19 => 
+            16 => 
             array (
                 'id' => '6a445882-a7b6-4732-ad6e-bb10469a5874',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -300,7 +258,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:19:09',
                 'updated_at' => '2022-02-01 17:19:09',
             ),
-            20 => 
+            17 => 
             array (
                 'id' => '6ff65182-9c4e-4f9c-8c83-caf7bff2084a',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -314,7 +272,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:51:44',
                 'updated_at' => '2022-02-01 10:51:44',
             ),
-            21 => 
+            18 => 
             array (
                 'id' => '7826c456-c50e-4997-aad4-1009688a507c',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -328,7 +286,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:22:46',
                 'updated_at' => '2022-02-10 16:22:46',
             ),
-            22 => 
+            19 => 
             array (
                 'id' => '7a63c53b-7f06-4af8-935e-817e5af05062',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -342,7 +300,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:15:15',
                 'updated_at' => '2022-02-01 17:15:15',
             ),
-            23 => 
+            20 => 
             array (
                 'id' => '7b28d968-a204-4231-bbe2-07c0763ed0c8',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -356,7 +314,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:22:46',
                 'updated_at' => '2022-02-10 16:22:46',
             ),
-            24 => 
+            21 => 
             array (
                 'id' => '7e3d0346-3465-44c6-a53b-5e8efaa2bf5f',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -370,7 +328,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:19:09',
                 'updated_at' => '2022-02-01 17:19:09',
             ),
-            25 => 
+            22 => 
             array (
                 'id' => '83e36714-1b1f-43db-9f66-65998ad3426b',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -384,7 +342,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:52:02',
                 'updated_at' => '2022-02-01 10:52:02',
             ),
-            26 => 
+            23 => 
             array (
                 'id' => '84b3e7c5-9037-4256-9ff9-87249cccf4d6',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -398,7 +356,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-01-31 16:04:13',
                 'updated_at' => '2022-02-01 08:20:56',
             ),
-            27 => 
+            24 => 
             array (
                 'id' => '84eeb23c-797b-462b-a930-d1a5c0ef7f8e',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -412,7 +370,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-01-31 16:04:13',
                 'updated_at' => '2022-01-31 16:04:13',
             ),
-            28 => 
+            25 => 
             array (
                 'id' => '8ce25b64-fff9-4991-b71e-2b426fb03386',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -426,7 +384,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-05 02:19:09',
                 'updated_at' => '2022-02-05 02:19:09',
             ),
-            29 => 
+            26 => 
             array (
                 'id' => '9161d272-ff9c-4d7a-88c9-c2e8e06aee0b',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -440,7 +398,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:19:09',
                 'updated_at' => '2022-02-01 17:19:09',
             ),
-            30 => 
+            27 => 
             array (
                 'id' => '940d3953-2559-473c-afff-4b957281b690',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -454,7 +412,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:52:02',
                 'updated_at' => '2022-02-01 10:52:02',
             ),
-            31 => 
+            28 => 
             array (
                 'id' => '972418c7-0aee-4b82-abd9-88a3b1a41c7f',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -468,7 +426,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-01-31 16:04:13',
                 'updated_at' => '2022-02-01 08:20:56',
             ),
-            32 => 
+            29 => 
             array (
                 'id' => 'a8c63ff7-0bc8-43b0-a243-38db33c9b2c7',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -482,7 +440,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:19:09',
                 'updated_at' => '2022-02-01 17:19:09',
             ),
-            33 => 
+            30 => 
             array (
                 'id' => 'aa74f684-5de2-4849-b2e7-8f57fffa271b',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -496,7 +454,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-01-31 16:04:13',
                 'updated_at' => '2022-02-01 08:20:56',
             ),
-            34 => 
+            31 => 
             array (
                 'id' => 'ab0d0e09-a745-45a1-b009-0f917e1d4488',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -510,7 +468,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:23:43',
                 'updated_at' => '2022-02-10 16:23:43',
             ),
-            35 => 
+            32 => 
             array (
                 'id' => 'ae73534e-7eaa-404d-9610-0bd9193af9c8',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -524,7 +482,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:52:02',
                 'updated_at' => '2022-02-01 10:52:02',
             ),
-            36 => 
+            33 => 
             array (
                 'id' => 'b48596f8-97fb-4ba1-a905-c7360ff02770',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -538,7 +496,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2022-02-01 08:20:14',
             ),
-            37 => 
+            34 => 
             array (
                 'id' => 'bc539feb-d022-46ca-bcc7-f922afe3332c',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -552,7 +510,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-01-31 16:04:13',
                 'updated_at' => '2022-02-01 08:20:56',
             ),
-            38 => 
+            35 => 
             array (
                 'id' => 'bd19890b-cef6-472b-ab8d-ca1af20157b2',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -566,7 +524,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:23:43',
                 'updated_at' => '2022-02-10 16:23:43',
             ),
-            39 => 
+            36 => 
             array (
                 'id' => 'bf772d73-2ebe-40b9-ad70-37b5e12a6876',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -580,7 +538,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:15:15',
                 'updated_at' => '2022-02-01 17:15:15',
             ),
-            40 => 
+            37 => 
             array (
                 'id' => 'c14b818d-34a2-45fe-8288-e9135f39c163',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -594,7 +552,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:23:43',
                 'updated_at' => '2022-02-10 16:23:43',
             ),
-            41 => 
+            38 => 
             array (
                 'id' => 'c6aeb7a5-77d7-481a-a8db-348738847519',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -608,21 +566,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2022-02-01 08:20:14',
             ),
-            42 => 
-            array (
-                'id' => 'c7a6877d-3d61-45f1-9dd4-42236e2640a8',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'function_id' => '7ac18b68-6097-4a7e-8fee-05f123c4ab76',
-                'action_path' => 'App\\Http\\Controllers\\Data\\PenyuluhController@store',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:05',
-                'updated_at' => '2022-02-06 09:04:05',
-            ),
-            43 => 
+            39 => 
             array (
                 'id' => 'ca1ed818-d960-46be-bac6-73c78c34e34a',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -636,21 +580,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-05 02:19:35',
                 'updated_at' => '2022-02-05 02:19:35',
             ),
-            44 => 
-            array (
-                'id' => 'cb2193d6-b49c-4ae6-b3ca-0bfd4ebe395a',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'function_id' => '0fbbbe9e-2b78-43a0-835d-0803f12f1136',
-                'action_path' => 'App\\Http\\Controllers\\Data\\PenyuluhController@showall',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:05',
-                'updated_at' => '2022-02-06 09:04:05',
-            ),
-            45 => 
+            40 => 
             array (
                 'id' => 'd63aca0b-6a2e-474b-8817-c6b8ea090df5',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -664,7 +594,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-05 02:19:35',
                 'updated_at' => '2022-02-05 02:19:35',
             ),
-            46 => 
+            41 => 
             array (
                 'id' => 'dc35ef5c-4ba1-47cf-baa8-89a100982224',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -678,7 +608,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:23:43',
                 'updated_at' => '2022-02-10 16:23:43',
             ),
-            47 => 
+            42 => 
             array (
                 'id' => 'dc66e8e5-2196-4b1a-aa9e-74defec16d2d',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -692,7 +622,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2022-02-01 08:20:14',
             ),
-            48 => 
+            43 => 
             array (
                 'id' => 'dc81dd0c-4f43-4866-b2b7-45d3b4eeb693',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -706,21 +636,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:52:02',
                 'updated_at' => '2022-02-01 10:52:02',
             ),
-            49 => 
-            array (
-                'id' => 'df6777a0-6e1c-408f-af32-fb9c89fa3cb4',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'function_id' => 'c3df7867-afe2-49a9-b2b0-4d84137c2913',
-                'action_path' => 'App\\Http\\Controllers\\Data\\PenyuluhController@destroy',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:05',
-                'updated_at' => '2022-02-06 09:04:05',
-            ),
-            50 => 
+            44 => 
             array (
                 'id' => 'ea65f82a-8168-4f12-9f51-38ea5e0777de',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -734,7 +650,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => NULL,
                 'updated_at' => '2022-01-31 16:02:33',
             ),
-            51 => 
+            45 => 
             array (
                 'id' => 'ecc32be4-b76e-419f-be53-bd0890055890',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -748,7 +664,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:52:02',
                 'updated_at' => '2022-02-01 10:52:02',
             ),
-            52 => 
+            46 => 
             array (
                 'id' => 'ed5bea0b-7129-46eb-91ee-0e5e57558f24',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -762,21 +678,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:12:42',
                 'updated_at' => '2022-02-01 17:12:42',
             ),
-            53 => 
-            array (
-                'id' => 'ee27ac42-ab84-4070-a46e-181c7cefb622',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'function_id' => '1198c41f-c120-465e-ab12-8cae427886e2',
-                'action_path' => 'App\\Http\\Controllers\\Data\\PenyuluhController@index',
-                'ajax_only' => false,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:03:39',
-                'updated_at' => '2022-02-06 09:03:39',
-            ),
-            54 => 
+            47 => 
             array (
                 'id' => 'f866d0df-04e8-494e-84f6-a56a4b660b44',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -790,21 +692,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:22:46',
                 'updated_at' => '2022-02-10 16:22:46',
             ),
-            55 => 
-            array (
-                'id' => 'fa302bb7-ae89-4a34-b499-8382e44c85b2',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => '6646a1f1-0858-419f-90c9-e7841df827fc',
-                'function_id' => 'a6b0e0ce-502b-4215-a138-676983b8ed6c',
-                'action_path' => 'App\\Http\\Controllers\\Data\\PenyuluhController@update',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:05',
-                'updated_at' => '2022-02-06 09:04:05',
-            ),
-            56 => 
+            48 => 
             array (
                 'id' => 'fc6c5106-0e08-4e5e-ab88-eec42a398865',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -818,7 +706,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:22:46',
                 'updated_at' => '2022-02-10 16:22:46',
             ),
-            57 => 
+            49 => 
             array (
                 'id' => 'fd29f8ba-23f2-49fb-8a74-bcba3ecd16a6',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -832,49 +720,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 17:15:15',
                 'updated_at' => '2022-02-01 17:15:15',
             ),
-            58 => 
-            array (
-                'id' => '9240abea-5584-4b3e-8f93-f7f3c166c768',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'function_id' => 'c3df7867-afe2-49a9-b2b0-4d84137c2913',
-                'action_path' => 'App\\Http\\Controllers\\Data\\SegmentsController@destroy',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:33',
-                'updated_at' => '2022-02-06 09:04:33',
-            ),
-            59 => 
-            array (
-                'id' => '9c85634a-0bc8-4f81-9450-a414f5a1f1ca',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'function_id' => '7ac18b68-6097-4a7e-8fee-05f123c4ab76',
-                'action_path' => 'App\\Http\\Controllers\\Data\\SegmentsController@store',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:33',
-                'updated_at' => '2022-02-06 09:04:33',
-            ),
-            60 => 
-            array (
-                'id' => 'f1418734-7bc1-4144-acb7-1a873184db73',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'function_id' => '0fbbbe9e-2b78-43a0-835d-0803f12f1136',
-                'action_path' => 'App\\Http\\Controllers\\Data\\SegmentsController@showall',
-                'ajax_only' => true,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-06 09:04:33',
-                'updated_at' => '2022-02-06 09:04:33',
-            ),
-            61 => 
+            50 => 
             array (
                 'id' => 'd06b776d-36e9-4351-acfa-01744ef20d50',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',
@@ -888,21 +734,7 @@ class ActionsTableSeeder extends Seeder
                 'created_at' => '2022-02-01 10:57:58',
                 'updated_at' => '2022-02-12 08:24:20',
             ),
-            62 => 
-            array (
-                'id' => 'e81ecd9a-0150-4d3f-99ce-ea313c96c2bb',
-                'module_id' => 'ece4e113-2f54-41fb-bc7b-f6ee87f52894',
-                'controller_id' => 'b09fc3dc-ea52-440b-bd51-76ba8dd3af19',
-                'function_id' => '1198c41f-c120-465e-ab12-8cae427886e2',
-                'action_path' => 'App\\Http\\Controllers\\Data\\SegmentsController@index',
-                'ajax_only' => false,
-                'type' => 'core',
-                'created_by' => 'admin',
-                'updated_by' => 'superadmin',
-                'created_at' => '2022-02-06 09:04:21',
-                'updated_at' => '2022-02-10 16:47:05',
-            ),
-            63 => 
+            51 => 
             array (
                 'id' => '85aca5e2-d66a-4927-bb26-d2940214f150',
                 'module_id' => 'c6011ac2-7e80-482e-9ffd-b565a18288aa',

@@ -165,42 +165,6 @@ class MenusTableSeeder extends Seeder
                 'created_at' => '2022-02-10 16:35:13',
                 'updated_at' => '2022-02-10 16:35:13',
             ),
-            8 => 
-            array (
-                'id' => '2b61e4b3-6161-4f63-9a1e-3b6fc9e305c9',
-                'menugroup_id' => '0acdc906-d7f9-43e4-ba50-b767477c5b16',
-                'menu_label' => 'Penyuluh',
-                'menu_icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
-</svg>',
-                'menu_desc' => 'Link menuju halaman Data Penyuluh',
-                'menu_order' => 1,
-                'route' => '/data/penyuluh',
-                'action_id' => 'ee27ac42-ab84-4070-a46e-181c7cefb622',
-                'type' => 'core',
-                'created_by' => '296c478c-3e40-4d05-83f5-a1e97e92aaf5',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-10 16:37:35',
-                'updated_at' => '2022-02-10 16:37:35',
-            ),
-            9 => 
-            array (
-                'id' => 'a874c70f-b002-4bd9-8ba3-8c60c595b1df',
-                'menugroup_id' => '0acdc906-d7f9-43e4-ba50-b767477c5b16',
-                'menu_label' => 'Segments',
-                'menu_icon' => '<svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2V6zM14 6a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2V6zM4 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2H6a2 2 0 01-2-2v-2zM14 16a2 2 0 012-2h2a2 2 0 012 2v2a2 2 0 01-2 2h-2a2 2 0 01-2-2v-2z" />
-</svg>',
-                'menu_desc' => 'Link menuju halaman Data Segments',
-                'menu_order' => 2,
-                'route' => '/data/segments',
-                'action_id' => 'e81ecd9a-0150-4d3f-99ce-ea313c96c2bb',
-                'type' => 'core',
-                'created_by' => '296c478c-3e40-4d05-83f5-a1e97e92aaf5',
-                'updated_by' => NULL,
-                'created_at' => '2022-02-10 16:38:57',
-                'updated_at' => '2022-02-10 16:38:57',
-            ),
         ));
         
         
