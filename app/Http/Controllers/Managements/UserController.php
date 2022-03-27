@@ -69,7 +69,7 @@ class UserController extends Controller
             return [
                 "id" => Str::uuid(),
                 "role_id" => $item,
-                "type" => "core",
+                "type" => "common",
                 "created_by" => auth()->user()->username,
                 "updated_by" => auth()->user()->username,
             ];

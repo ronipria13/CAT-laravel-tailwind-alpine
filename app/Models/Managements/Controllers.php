@@ -9,16 +9,6 @@ use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Controllers extends Model
 {
-    public function __construct()
-    {
-        // $param = request()->route()->parameter('controller');
-        // if($param != null){
-        //     if(!Str::isUuid($param)) {
-        //         abort(501);
-        //     }
-
-        // }
-    }
     use HasFactory;
 
     protected $keyType = 'string';

@@ -6865,9 +6865,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .h-24 {
   height: 6rem;
 }
-.h-96 {
-  height: 24rem;
-}
 .max-h-96 {
   max-height: 24rem;
 }
@@ -7184,9 +7181,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .border-t-0 {
   border-top-width: 0px;
 }
-.border-t-2 {
-  border-top-width: 2px;
-}
 .border-b-4 {
   border-bottom-width: 4px;
 }
@@ -7492,9 +7486,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 }
 .pr-2 {
   padding-right: 0.5rem;
-}
-.pt-3 {
-  padding-top: 0.75rem;
 }
 .pt-7 {
   padding-top: 1.75rem;
@@ -7828,22 +7819,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .odd\:bg-gray-100:nth-child(odd) {
   --tw-bg-opacity: 1;
   background-color: rgb(243 244 246 / var(--tw-bg-opacity));
-}
-.read-only\:text-gray-400:-moz-read-only {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-.read-only\:text-gray-400:read-only {
-  --tw-text-opacity: 1;
-  color: rgb(156 163 175 / var(--tw-text-opacity));
-}
-.read-only\:outline-none:-moz-read-only {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
-}
-.read-only\:outline-none:read-only {
-  outline: 2px solid transparent;
-  outline-offset: 2px;
 }
 .focus-within\:z-10:focus-within {
   z-index: 10;

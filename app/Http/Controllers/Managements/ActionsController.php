@@ -68,7 +68,7 @@ class ActionsController extends Controller
 
             $batch['action_path'] = "App\\Http\\Controllers\\" . $modules->module_name . "\\" . $controllers->controller_name . 'Controller@' . $function->function_name;
             $batch['ajax_only'] = $form['ajax_only'];
-            $batch['type'] = "core";
+            $batch['type'] = "common";
 
 
             if($action->exists()) {

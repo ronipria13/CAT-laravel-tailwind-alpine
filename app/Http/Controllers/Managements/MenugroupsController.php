@@ -50,7 +50,7 @@ class MenugroupsController extends Controller
             "menugroup_label" => $request->menugroup_label,
             "menugroup_desc" => $request->menugroup_desc,
             "menugroup_order" => $request->menugroup_order,
-            "type" => "core",
+            "type" => "common",
             "created_by" => auth()->user()->id,
         ]);
 

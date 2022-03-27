@@ -61,7 +61,7 @@ class PermissionsController extends Controller
                 "id" => Str::uuid()->toString(),
                 "role_id" => $request->role_id,
                 "action_id" => $item,
-                "type" => "core",
+                "type" => "common",
                 "created_by" => auth()->user()->id,
                 "updated_by" => auth()->user()->id
             ];

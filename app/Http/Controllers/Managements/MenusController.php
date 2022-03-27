@@ -56,7 +56,7 @@ class MenusController extends Controller
             "menu_order" => $request->menu_order,
             "action_id" => $request->action_id,
             "route" => $request->route,
-            "type" => 'core',
+            "type" => 'common',
             "created_by" => auth()->user()->id,
         ]);
 

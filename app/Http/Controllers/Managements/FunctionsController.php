@@ -45,7 +45,7 @@ class FunctionsController extends Controller
         ]);
 
         $form['id'] = Str::uuid();
-        $form['type'] = "core";
+        $form['type'] = "common";
         $form['created_by'] = auth()->user()->username;
 
         $function = Functions::create($form);

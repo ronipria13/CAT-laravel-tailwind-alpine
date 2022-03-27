@@ -8,7 +8,7 @@
     <link href="{{ asset('css/app.css') }}" rel="stylesheet">
     
     @livewireStyles
-    <link rel="icon" type="image/png" href="{{ asset('images/logo_sumbar.png') }}">
+    <link rel="icon" type="image/png" href="{{ asset('images/985px-Laravel.svg.png') }}">
     <title>{{ env("APP_NAME", "Laravel") }}@yield('title')</title>
 </head>
 <body>

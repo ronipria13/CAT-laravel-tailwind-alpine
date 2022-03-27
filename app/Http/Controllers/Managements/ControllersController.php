@@ -45,7 +45,7 @@ class ControllersController extends Controller
         ]);
 
         $form['id'] = Str::uuid();
-        $form['type'] = "core";
+        $form['type'] = "common";
         $form['created_by'] = auth()->user()->username;
 
         $controller = Controllers::create($form);
