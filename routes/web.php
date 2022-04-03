@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\RefController;
 use App\Http\Controllers\Managements\UserController;
+use Maatwebsite\Excel\Row;
 
 /*
 |--------------------------------------------------------------------------
@@ -72,19 +73,42 @@ Route::middleware(['auth','roleplay','isActiveUser'])->group(function () {
     });
 
     Route::prefix('data')->group(function () {
-        Route::resource('/penyuluh', App\Http\Controllers\Data\PenyuluhController::class)->except(['create','edit']);
-        Route::resource('/segments', App\Http\Controllers\Data\SegmentsController::class)->except(['create','edit']);
+        Route::get('/peserta/showall', [App\Http\Controllers\Data\PesertaController::class, 'showall']);
+        Route::resource('/peserta', App\Http\Controllers\Data\PesertaController::class)->except(['create','edit'])
+        ->where(['peserta' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])
+        ->parameters(['peserta' => 'peserta']);
+
+        Route::get('/paketsoal/showall', [App\Http\Controllers\Data\PaketsoalController::class, 'showall']);
+        Route::resource('/paketsoal', App\Http\Controllers\Data\PaketsoalController::class)->except(['create','edit'])
+        ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])
+        ->parameters(['paketsoal' => 'paketsoal']);
+
+        Route::get('/kolom/showall', [App\Http\Controllers\Data\KolomController::class, 'showall']);
+        Route::get('/paketsoal/kolom/{id}', [App\Http\Controllers\Data\KolomController::class, 'index']);
+        Route::resource('/kolom', App\Http\Controllers\Data\KolomController::class)->except(['create','edit'])
+        ->where(['kolom' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])
+        ->parameters(['kolom' => 'kolom']);
+
+        Route::get('/soalkecermatan/showall', [App\Http\Controllers\Data\SoalkecermatanController::class, 'showall']);
+        Route::get('/paketsoal/soalkecermatan/{id}', [App\Http\Controllers\Data\SoalkecermatanController::class, 'index']);
+        Route::resource('/soalkecermatan', App\Http\Controllers\Data\SoalkecermatanController::class)->except(['create','edit'])
+        ->where(['soalkecermatan' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])
+        ->parameters(['soalkecermatan' => 'soalkecermatan']);
     });
 
-});
+    Route::prefix('paketsoal')->group(function () {
+        Route::get('soalkecermatan', [App\Http\Controllers\Paketsoal\SoalkecermatanController::class, 'index']);
+        Route::get('soalkecermatan/getready/{paketsoal}', [App\Http\Controllers\Paketsoal\SoalkecermatanController::class, 'create'])
+        ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}']);
+        Route::get('soalkecermatan/take/{paketsoal}', [App\Http\Controllers\Paketsoal\SoalkecermatanController::class, 'store'])
+        ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}']);
+    });
 
-Route::prefix('ref')->group(function () {
-    Route::post('/province', [RefController::class, 'provinces']);
-    Route::post('/regency', [RefController::class, 'regencies']);
-    Route::post('/district', [RefController::class, 'districts']);
-    Route::post('/village', [RefController::class, 'villages']);
-    Route::post('/user', [RefController::class, 'users']);
-    Route::post('/penyuluh', [RefController::class, 'penyuluh']);
+    Route::prefix('latihan')->group(function () {
+        Route::get('paketsoal/{latihan}', [App\Http\Controllers\Latihan\PaketsoalController::class, 'index'])
+        ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])->name('latihan.paketsoal');
+    });
+
 });
 
 Route::get('/alpine', function () {

@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Laravel\Sanctum\HasApiTokens;
+use App\Models\Data\Peserta;
 use App\Models\Managements\Roles;
+use Laravel\Sanctum\HasApiTokens;
 use App\Models\Managements\Roleplay;
 use Illuminate\Notifications\Notifiable;
 use Illuminate\Contracts\Auth\MustVerifyEmail;
@@ -59,5 +60,8 @@ class User extends Authenticatable
     {
         return $this->hasOne(Roles::class, 'id', 'current_role');
     }
-
+    public function peserta()
+    {
+        return $this->hasOne(Peserta::class, 'user_id', 'id');
+    }
 }
