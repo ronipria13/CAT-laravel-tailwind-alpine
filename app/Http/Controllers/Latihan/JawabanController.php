@@ -33,7 +33,7 @@ class JawabanController extends Controller
             $validation['answered_time'] = now();
         }else{
             $validation['true'] = false;
-            $validation['value'] = 0;
+            $validation['value'] = -3;
             $validation['answered_time'] = now();
         }
         //cek apakah sudah pernah menjawab

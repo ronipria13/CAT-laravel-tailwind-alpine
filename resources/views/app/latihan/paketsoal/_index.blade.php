@@ -31,12 +31,12 @@
         <button class="text-xl font-bold border-2 hover:border-black border-blue-400 hover:bg-white bg-blue-400 
         hover:text-black text-white py-1 px-10 mx-2 rounded-md
         disabled:bg-white disabled:border-black disabled:text-blue-400 disabled:cursor-not-allowed"
-        @click="confFinishIt()">Selesaikan</button>
+        @click="confFinishIt()" style="display: none" >Selesaikan</button>
     </div>
     <div class="w-full my-5 grid lg:grid-cols-2 md:grid-cols-1 gap-2 p-2">
         <div x-init="renderSoal()">
-            <h2 class="text-xl font-bold mb-2">KOLOM <span x-text="label.kolom.no">0</span> </h2>
-            <table class="w-full mb-5">
+            <h2 class="text-xl font-bold mb-2" style="display: none">KOLOM <span x-text="label.kolom.no">0</span> </h2>
+            <table class="w-full mt-20 mb-5">
                 <thead>
                     <tr>
                         <th class="border-2 border-black">a</th>
@@ -54,8 +54,8 @@
                     </tr>
                 </thead>
             </table>
-            <h2 class="w-full mt-20 text-xl font-bold mb-2">Soal <span x-text="label.soal.no">0</span> </h2>
-            <div class="w-full flex flex-row justify-center mb-2">
+            <h2 class="w-full mt-20 text-xl font-bold mb-2" style="display: none">Soal <span x-text="label.soal.no">0</span> </h2>
+            <div class="w-full flex flex-row justify-center mt-20 mb-2">
                 
                 <table class="w-2/3">
                     <thead>
@@ -68,15 +68,15 @@
                     </thead>
                 </table>
             </div>
-            <h2 class="w-full mt-20 text-xl font-bold mb-2">Jawaban Soal <span x-text="label.soal.no">0</span> </h2>
-            <div class="w-full flex flex-wrap justify-center mb-2">
+            <h2 class="w-full mt-20 text-xl font-bold mb-2" style="display: none">Jawaban Soal <span x-text="label.soal.no">0</span> </h2>
+            <div class="w-full flex flex-wrap justify-center mt-20 mb-2">
                 <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.a" @click="answerIt('a')">A</button>
                 <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.b" @click="answerIt('b')">B</button>
                 <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.c" @click="answerIt('c')">C</button>
                 <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.d" @click="answerIt('d')">D</button>
                 <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.e" @click="answerIt('e')">E</button>
             </div>
-            <div class="w-full flex justify-between mt-20 mb-2">
+            <div class="w-full flex justify-between mt-20 mb-2" style="display: none">
                 <button 
                 class="text-xl font-bold border-2 hover:border-black border-blue-400 hover:bg-white bg-blue-400 
                 hover:text-black text-white py-1 px-10 mx-2 rounded-md
