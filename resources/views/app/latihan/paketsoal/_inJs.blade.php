@@ -49,32 +49,34 @@
             soal_list: {!! $latihan->soal_list !!},
             counter(){
                 return setInterval(() => {
-                    if(this.timer < 0){
+                    if(this.timer == 0){
                         this.timeup()
                         clearInterval(this.counter)
                     }
-                    let hours = Math.floor(this.timer / (60 * 60));
-                    let minutes = Math.floor((this.timer % (60 * 60)) /60 );
-                    let seconds = Math.floor((this.timer % (60 * 60 )) % 60);
-                    this.countdown.hour = hours > 9 ? hours : '0' + hours;
-                    this.countdown.minute = minutes > 9 ? minutes : '0' + minutes;
-                    this.countdown.second = seconds > 9 ? seconds : '0' + seconds;
+                    else{
+                        let hours = Math.floor(this.timer / (60 * 60));
+                        let minutes = Math.floor((this.timer % (60 * 60)) /60 );
+                        let seconds = Math.floor((this.timer % (60 * 60 )) % 60);
+                        this.countdown.hour = hours > 9 ? hours : '0' + hours;
+                        this.countdown.minute = minutes > 9 ? minutes : '0' + minutes;
+                        this.countdown.second = seconds > 9 ? seconds : '0' + seconds;
 
-                    let devidedTimer = Math.floor(this.timer / 60); //timer dibagi 60
-                    let kolomLength = this.soal_list.length; //jumlah kolom
-                    devidedTimer = devidedTimer > kolomLength ? kolomLength : devidedTimer;
-                    let expectCol = Math.floor(kolomLength - devidedTimer); //kolom yang harus dikerjakan pada saat ini
-                    console.log(devidedTimer, kolomLength, expectCol);
+                        let devidedTimer = Math.floor(this.timer / 60); //timer dibagi 60
+                        let kolomLength = this.soal_list.length; //jumlah kolom
+                        devidedTimer = devidedTimer > kolomLength ? kolomLength : devidedTimer;
+                        let expectCol = Math.floor(kolomLength - devidedTimer); //kolom yang harus dikerjakan pada saat ini
+                        console.log(devidedTimer, kolomLength, expectCol);
 
-                    if(seconds == 0 && expectCol > this.currentIndex.kolom){ // jika sudah tepat 60 detik dan masih ada waktu
-                        if(this.currentIndex.kolom < this.soal_list.length){  //jika kolom yang sedang dikerjakan lebih kecil dari kolom yang harus dikerjakan
-                            this.currentIndex.kolom = expectCol; //set kolom ke kolom seharusnya
-                            this.currentIndex.soal = 0;
-                            this.renderSoal(); //render soal
+                        if(seconds == 0 && expectCol > this.currentIndex.kolom){ // jika sudah tepat 60 detik dan masih ada waktu
+                            if(this.currentIndex.kolom < this.soal_list.length){  //jika kolom yang sedang dikerjakan lebih kecil dari kolom yang harus dikerjakan
+                                this.currentIndex.kolom = expectCol; //set kolom ke kolom seharusnya
+                                this.currentIndex.soal = 0;
+                                this.renderSoal(); //render soal
+                            }
                         }
+                        // console.log(this.countdown.hour + ':' + this.countdown.minute + ':' + this.countdown.second);
+                        this.timer--;
                     }
-                    // console.log(this.countdown.hour + ':' + this.countdown.minute + ':' + this.countdown.second);
-                    this.timer--;
                 }, 1000);
             },
             successAlert: {
@@ -142,20 +144,32 @@
             },
             async answerIt(option)
             {
-                let answer = this.soal_list[this.currentIndex.kolom][`col_${option}`];
-                let soal_id = this.soal_list[this.currentIndex.kolom].soals[this.currentIndex.soal].id;
-                let latihan_id = "{{ $latihan->id }}";
-                this.answerList[soal_id] = answer;
-                if(!this.currentAnswers.includes(soal_id)) this.currentAnswers.push(soal_id);
-                this.nextSoal();
-                try {
-                    const sendIt = await axios.post('/latihan/jawaban/store', {
-                        answer: answer,
-                        soal_id: soal_id,
-                        latihan_id: latihan_id
-                    });
-                } catch (err) {
-                    console.log(err);
+                if(this.timer > 0){
+                    let answer = this.soal_list[this.currentIndex.kolom][`col_${option}`];
+                    let soal_id = this.soal_list[this.currentIndex.kolom].soals[this.currentIndex.soal].id;
+                    let latihan_id = "{{ $latihan->id }}";
+                    this.answerList[soal_id] = answer;
+                    if(!this.currentAnswers.includes(soal_id)) this.currentAnswers.push(soal_id);
+                    this.nextSoal();
+                    try {
+                        const sendIt = await axios.post('/latihan/jawaban/store', {
+                            answer: answer,
+                            soal_id: soal_id,
+                            latihan_id: latihan_id
+                        });
+                    } catch (err) {
+                        console.log(err);
+                    }
+                }
+                else{
+                    this.successAlert.open = true;
+                    this.successAlert.message = "Waktu telah habis, mohon menunggu proses selesai";
+                    Swal.fire({
+                            icon: 'warning',
+                            title: 'Waktu telah habis, mohon menunggu proses selesai',
+                            showConfirmButton: false,
+                            timer: 1500
+                        })
                 }
             },
             nextSoal(){
@@ -189,8 +203,8 @@
                 }
             },
             gotoSoal(index){
-                this.currentIndex.soal = index;
-                this.renderSoal();
+                // this.currentIndex.soal = index;
+                // this.renderSoal();
             },
             resetAnswer(){
                 this.answerBtn = {
@@ -240,14 +254,14 @@
                 }
             },
             timeup(){
-                Swal.fire({
-                    icon: 'warning',
-                    title: 'Waktu habis',
-                    showConfirmButton: false,
-                    timer: 1500
-                })
                 this.successAlert.open = true;
-                this.successAlert.message = 'Selamat Anda telah menyelesaikan latihan ini';
+                this.successAlert.message = "Waktu telah habis, mohon menunggu proses selesai";
+                Swal.fire({
+                        icon: 'warning',
+                        title: 'Waktu telah habis, mohon menunggu proses selesai',
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
                 setTimeout(() => {
                     location.href = "/latihan/riwayat/{{ $latihan->id }}";
                 }, 1000);

@@ -35,8 +35,8 @@
     </div>
     <div class="w-full my-5 grid lg:grid-cols-2 md:grid-cols-1 gap-2 p-2">
         <div x-init="renderSoal()">
-            <h2 class="text-xl font-bold mb-2" style="display: none">KOLOM <span x-text="label.kolom.no">0</span> </h2>
-            <table class="w-full mt-20 mb-5">
+            <h2 class="text-xl font-bold mb-2 mt-20">KOLOM <span x-text="label.kolom.no">0</span> </h2>
+            <table class="w-full mb-5">
                 <thead>
                     <tr>
                         <th class="border-2 border-black">a</th>

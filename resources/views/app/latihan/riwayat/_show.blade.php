@@ -11,7 +11,7 @@
         <p>Lama Pengerjaan : {{ $stats['lamaPengerjaan'] }}</p>
         <p>Jumlah Soal : {{ $stats['jumlahSoal'] }}</p>
         <p>Tidak Menjawab : {{ $stats['tidakJawab'] }}</p>
-        <p>Soal Terjawab : {{ ($stats['salahJawab'] + $stats['benarJawab']) }}</p>
+        <p>Soal Terjawab : {{ $stats['soalTerjawab'] }}</p>
         <p>Benar : {{ $stats['benarJawab'] }}</p>
         <p>Salah : {{ $stats['salahJawab'] }}</p>
         <p>Kecepatan Menjawab : {{ $stats['kecepatan'] }}</p>

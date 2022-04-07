@@ -14,7 +14,7 @@
         <div class="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url({{ asset('images/scott-graham-5fNmWej4tAA-unsplash.jpg') }});">
             <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
             <div class="w-full px-24 z-10">
-                <h1 class="text-7xl font-bold text-left tracking-wide">{{ env("APP_NAME", "APPNAME") }}</h1>
+                <h1 class="text-7xl font-bold text-left tracking-wide">{{ env('APP_NAME') }}</h1>
                 <p class="text-3xl my-4">Computer Assisted Test</p>
             </div>
 
@@ -31,7 +31,7 @@
                     <span class="w-10 h-10 items-center justify-center inline-flex rounded-full font-bold text-lg border-2 border-white">in</span>
                 </div> --}}
                 <p class="text-gray-100 py-6 text-4xl font-weight-bolder">
-                    Computer Assisted Test
+                    MM EDUCATION
                 </p>
                 <p class="text-gray-100">
                     Silakan login
