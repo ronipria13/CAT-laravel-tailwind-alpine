@@ -39,7 +39,7 @@
                 </svg>
             </button>
 
-            <x-app.rolesgenerator />
+            <x-rolesgenerator />
         </div>
 
         <div x-data="{ dropdownOpen: false }" class="relative">

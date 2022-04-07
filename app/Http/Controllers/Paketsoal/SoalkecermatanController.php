@@ -79,7 +79,7 @@ class SoalkecermatanController extends Controller
         $latihan = Latihan::where('peserta_id', $user->peserta->id )->where('paketsoal_id', $paketsoal->id)->orderBy('end_at', 'desc')->first();
         // dd($latihan->end_at . " - " . now());
         // jika latihan yang sama belum diakhiri
-        if(Carbon::createFromFormat('Y-m-d H:i:s',$latihan->end_at)->diffInSeconds(now(),false) < 0 AND $latihan->ended_at == null){
+        if($latihan != NULL AND Carbon::createFromFormat('Y-m-d H:i:s',$latihan->end_at)->diffInSeconds(now(),false) < 0 AND $latihan->ended_at == null){
             return redirect()->route('latihan.paketsoal', $latihan->id);
         }
         return view('app.paketsoal.soalkecermatan._ready', compact('paketsoal'));

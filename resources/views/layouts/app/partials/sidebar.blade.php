@@ -9,5 +9,5 @@
         </div>
     </div>
 
-<x-app.menugenerator />
+<x-menugenerator />
 </div>
