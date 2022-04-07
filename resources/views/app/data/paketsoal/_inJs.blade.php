@@ -4,6 +4,8 @@
         return {
             openModal : false,
             formState : 'save',
+            totalData: {{ $total }},
+            maxData: {{ $max }}, 
             idData : null,
             successAlert: {
                 open: false,
@@ -16,18 +18,30 @@
             form: {
                 name: '',
                 desc: '',
-                type: ''
+                type: '',
+                status: '',
             },
             errMsg: {
                 name: '',
                 desc: '',
                 type: '',
+                status: '',
             },
             addData() {
-                this.resetForm()
-                this.idData = null
-                this.formState = 'save'
-                this.openModal = true
+                if(this.totalData >= this.maxData) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: "Paket soal sudah mencapai batas maksimal",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+                else{
+                    this.resetForm()
+                    this.idData = null
+                    this.formState = 'save'
+                    this.openModal = true
+                }
             },
             confirmSave() {
                 const title = this.formState == 'edit' ? 'Ubah data?' : 'Simpan data?'
@@ -99,6 +113,7 @@
                             name: paketsoal.name,
                             desc: paketsoal.desc,
                             type: paketsoal.type,
+                            status: paketsoal.status,
                         }
                         this.openModal = true
                     }
@@ -162,11 +177,13 @@
                     name: '',
                     desc: '',
                     type: '',
+                    status: '',
                 }
                 this.errMsg = {
                     name: '',
                     desc: '',
                     type: '',
+                    status: '',
                 }
             }
         }

@@ -17,5 +17,12 @@ class Latihan extends Model
 
     protected $guarded = ['created_at','updated_at'];
 
+    protected $dates = ['start_at', 'end_at', 'ended_at'];
+
     public $incrementing = false;
+
+    public function soal()
+    {
+        return $this->hasMany('App\Models\Data\Soalkecermatan', 'paketsoal_id', 'paketsoal_id');
+    }
 }

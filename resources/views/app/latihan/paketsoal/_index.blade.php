@@ -12,7 +12,7 @@
           <svg class="w-4 h-4 fill-current" role="button" viewBox="0 0 20 20"><path d="M4.293 4.293a1 1 0 011.414 0L10 8.586l4.293-4.293a1 1 0 111.414 1.414L11.414 10l4.293 4.293a1 1 0 01-1.414 1.414L10 11.414l-4.293 4.293a1 1 0 01-1.414-1.414L8.586 10 4.293 5.707a1 1 0 010-1.414z" clip-rule="evenodd" fill-rule="evenodd"></path></svg>
         </span>
     </div>
-    <div class="w-1/2 flex flex-row" x-init="counter()">
+    <div class="w-full flex flex-row" x-init="counter()">
         <div class="w-16 h-16 mx-1 border-2 align-middle rounded-lg border-gray-500">
             <h3 class="text-bold text-5xl text-center" x-text="countdown.hour">00</h3>
         </div>
@@ -28,6 +28,10 @@
         <div class="w-16 h-16 mx-1 border-2 align-middle rounded-lg border-gray-500">
             <h3 class="text-bold text-5xl text-center" x-text="countdown.second">00</h3>
         </div>
+        <button class="text-xl font-bold border-2 hover:border-black border-blue-400 hover:bg-white bg-blue-400 
+        hover:text-black text-white py-1 px-10 mx-2 rounded-md
+        disabled:bg-white disabled:border-black disabled:text-blue-400 disabled:cursor-not-allowed"
+        @click="confFinishIt()">Selesaikan</button>
     </div>
     <div class="w-full my-5 grid lg:grid-cols-2 md:grid-cols-1 gap-2 p-2">
         <div x-init="renderSoal()">
@@ -66,11 +70,11 @@
             </div>
             <h2 class="w-full mt-20 text-xl font-bold mb-2">Jawaban Soal <span x-text="label.soal.no">0</span> </h2>
             <div class="w-full flex flex-wrap justify-center mb-2">
-                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md" @click="answerIt('a')">A</button>
-                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md" @click="answerIt('b')">B</button>
-                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md" @click="answerIt('c')">C</button>
-                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md" @click="answerIt('d')">D</button>
-                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md" @click="answerIt('e')">E</button>
+                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.a" @click="answerIt('a')">A</button>
+                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.b" @click="answerIt('b')">B</button>
+                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.c" @click="answerIt('c')">C</button>
+                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.d" @click="answerIt('d')">D</button>
+                <button class="lg:text-xl md:text-base font-bold border-2 border-black hover:border-blue-400 hover:bg-blue-400 hover:text-white py-1 md:px-5 px-3 m-2 rounded-md disabled:bg-slate-400 disabled:cursor-not-allowed" :disabled="answerBtn.e" @click="answerIt('e')">E</button>
             </div>
             <div class="w-full flex justify-between mt-20 mb-2">
                 <button 
@@ -79,7 +83,10 @@
                 disabled:bg-white disabled:border-black disabled:text-blue-400 disabled:cursor-not-allowed" 
                 :disabled="btnPrev" 
                 @click="prevSoal()">Prev</button>
-                <button class="text-xl font-bold border-2 hover:border-black border-blue-400 hover:bg-white bg-blue-400 hover:text-black text-white py-1 px-10 mx-2 rounded-md"
+                <button 
+                class="text-xl font-bold border-2 hover:border-black border-blue-400 hover:bg-white bg-blue-400 
+                hover:text-black text-white py-1 px-10 mx-2 rounded-md
+                disabled:bg-white disabled:border-black disabled:text-blue-400 disabled:cursor-not-allowed"
                 :disabled="btnNext" @click="nextSoal()">Next</button>
                 
             </div>

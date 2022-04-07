@@ -11,7 +11,7 @@
 </head>
 <body>
     <section class="min-h-screen flex items-stretch text-white " x-data="loginState()">
-        <div class="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url(https://images.unsplash.com/photo-1523539693385-e5e891eb4465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80);">
+        <div class="lg:flex w-1/2 hidden bg-gray-500 bg-no-repeat bg-cover relative items-center" style="background-image: url({{ asset('images/scott-graham-5fNmWej4tAA-unsplash.jpg') }});">
             <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
             <div class="w-full px-24 z-10">
                 <h1 class="text-7xl font-bold text-left tracking-wide">{{ env("APP_NAME", "APPNAME") }}</h1>
@@ -20,7 +20,7 @@
 
         </div>
         <div class="lg:w-1/2 w-full flex items-center justify-center text-center md:px-16 px-0 z-0" style="background-color: #161616;">
-            <div class="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center" style="background-image: url(https://images.unsplash.com/photo-1523539693385-e5e891eb4465?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1978&q=80);">
+            <div class="absolute lg:hidden z-10 inset-0 bg-gray-500 bg-no-repeat bg-cover items-center" style="background-image: url({{ asset('images/scott-graham-5fNmWej4tAA-unsplash.jpg') }});">
                 <div class="absolute bg-black opacity-60 inset-0 z-0"></div>
             </div>
             <div class="w-full py-6 z-20">

@@ -20,6 +20,7 @@
     <div class="flex items-center">
         <div class="px-10 mx-auto container align-middle">
             <div class="grid grid-cols-2 gap-2">
+                @if (!empty($paketsoal))
                 @foreach ($paketsoal as $item)
                 <a href="/paketsoal/soalkecermatan/getready/{{ $item->id }}" class="shadow rounded-lg py-3 px-5 bg-white">
                     <div class="flex flex-row justify-between items-center">
@@ -43,6 +44,11 @@
                 </a>
                     
                 @endforeach
+                @else
+                <div class="col-span-2 text-center">
+                    <h1 class="text-gray-700 text-3xl font-medium">No Data</h1>
+                </div>
+                @endif
             </div>
         </div>
     </div>

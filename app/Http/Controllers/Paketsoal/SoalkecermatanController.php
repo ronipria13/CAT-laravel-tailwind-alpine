@@ -13,20 +13,20 @@ use App\Http\Controllers\Controller;
 class SoalkecermatanController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * menampilkan halaman daftar pelatihan yang bisa dipilih oleh peserta
      *
      * @return \Illuminate\Http\Response
      */
     public function index()
     {
         //
-        $paketsoal = Paketsoal::where('type', 'kecermatan')->get();
+        $paketsoal = Paketsoal::where('type', 'kecermatan')->where('status', 'released')->get();
         return view('app.paketsoal.soalkecermatan._index', compact('paketsoal'));
     }
 
     
     /**
-     * Store a newly created resource in storage.
+     * Take latihan untuk initiate latihan soal kecermatan
      *
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
@@ -60,7 +60,7 @@ class SoalkecermatanController extends Controller
             'paketsoal_id' => $paketsoal[0]['id'],
             'peserta_id' => $dataPeserta->id,
             'start_at' => now(),
-            'end_at' => now()->addMinutes(100),
+            'end_at' => now()->addMinutes(10),
             'soal_list' => json_encode($soallist),
             'created_by' => auth()->user()->username,
         ]);
@@ -68,7 +68,7 @@ class SoalkecermatanController extends Controller
     }
     
     /**
-     * Show the form for creating a new resource.
+     * menampilkan halaman detail dan persiapan sebelum memulai test
      *
      * @return \Illuminate\Http\Response
      */

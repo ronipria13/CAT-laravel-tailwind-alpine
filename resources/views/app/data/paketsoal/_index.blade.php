@@ -61,6 +61,20 @@
                     </select>
                     <small x-text="errMsg.type" class="ml-3 text-xs text-red-500"></small>
                 </div>
+                <div class="w-full px-3 my-3">
+                    <label class="block tracking-wide text-gray-700 text-sm font-bold mb-2" for="status">
+                        Status
+                    </label>
+                    <select name="status" x-model="form.status"
+                    class="w-full h-9 py-1 px-3 text-base text-gray-700 placeholder-gray-300 border rounded-lg focus:shadow-outline" 
+                    type="text" id="roleSelect"
+                    placeholder="Pilih status...">
+                        <option value="">Pilih status...</option>
+                        <option value="draft">Draft</option>
+                        <option value="released">Released</option>
+                    </select>
+                    <small x-text="errMsg.status" class="ml-3 text-xs text-red-500"></small>
+                </div>
                 
             </div>
             <!-- Buttons -->

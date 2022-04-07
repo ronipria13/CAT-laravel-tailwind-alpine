@@ -27,7 +27,13 @@ Route::middleware('guest')->group(function () {
 Route::middleware('auth')->group(function () {
     Route::get('/logout', [App\Http\Controllers\LoginController::class, 'destroy'])->name('logout');
     Route::get('/roleplay/switch/{role_id}', [App\Http\Controllers\RolePlayController::class, 'switch'])->name('switch')->middleware('isActiveUser');
-    Route::get('/home', function () { return view('dashboard'); })->name('home')->middleware('isActiveUser');
+    Route::get('/home', [App\Http\Controllers\DashboardController::class, 'index'])->name('home')->middleware('isActiveUser');
+    Route::get('/changepassword', [App\Http\Controllers\ChangepasswordController::class, 'index'])->name('changepassword')->middleware('isActiveUser');
+    Route::put('/changepassword/{user}', [App\Http\Controllers\ChangepasswordController::class, 'update'])->middleware('isActiveUser')
+    ->where(['user' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}']);
+    Route::get('/profile', [App\Http\Controllers\ProfileController::class, 'index'])->name('profile')->middleware('isActiveUser');
+    Route::put('/profile/{user}', [App\Http\Controllers\ProfileController::class, 'update'])->middleware('isActiveUser')
+    ->where(['user' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}']);
 });
 
 //protected routes with roleplay
@@ -107,6 +113,12 @@ Route::middleware(['auth','roleplay','isActiveUser'])->group(function () {
     Route::prefix('latihan')->group(function () {
         Route::get('paketsoal/{latihan}', [App\Http\Controllers\Latihan\PaketsoalController::class, 'index'])
         ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])->name('latihan.paketsoal');
+        Route::patch('paketsoal/{latihan}', [App\Http\Controllers\Latihan\PaketsoalController::class, 'update'])
+        ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}']);
+        Route::post('jawaban/store', [App\Http\Controllers\Latihan\JawabanController::class, 'store']);
+        Route::get('riwayat', [App\Http\Controllers\Latihan\RiwayatController::class, 'index']);
+        Route::get('riwayat/{latihan}', [App\Http\Controllers\Latihan\RiwayatController::class, 'show'])->name('latihan.riwayat')
+        ->where(['latihan' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}']);
     });
 
 });

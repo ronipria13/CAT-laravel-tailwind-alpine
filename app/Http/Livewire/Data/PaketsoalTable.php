@@ -5,6 +5,7 @@ namespace App\Http\Livewire\Data;
 use App\Models\Data\Paketsoal;
 use Mediconesystems\LivewireDatatables\Column;
 use Mediconesystems\LivewireDatatables\Http\Livewire\LivewireDatatable;
+use Mediconesystems\LivewireDatatables\NumberColumn;
 
 class PaketsoalTable extends LivewireDatatable
 {
@@ -40,6 +41,15 @@ class PaketsoalTable extends LivewireDatatable
 
             Column::name('type')
             ->label('Tipe'),
+
+            Column::name('status')
+            ->label('Status'),
+
+            Column::raw('(SELECT COUNT(*) FROM kolom WHERE kolom.paketsoal_id = paketsoal.id) AS jml')
+            ->label('Jumlah Kolom'),
+
+            Column::raw('(SELECT COUNT(*) FROM soalkecermatan WHERE soalkecermatan.paketsoal_id = paketsoal.id) AS jml_soal')
+            ->label('Jumlah Soal'),
 
             
             Column::callback('id', function ($id) {

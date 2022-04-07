@@ -5,6 +5,8 @@
             openModal : false,
             formState : 'save',
             idData : null,
+            totalData : {{ $total }},
+            maxData: {{ $max }},
             successAlert: {
                 open: false,
                 message: ''
@@ -34,10 +36,20 @@
                 password_confirmation: ''
             },
             addData() {
-                this.resetForm()
-                this.idData = null
-                this.formState = 'save'
-                this.openModal = true
+                if(this.totalData >= this.maxData) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: "Peserta sudah mencapai batas maksimal",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+                else{
+                    this.resetForm()
+                    this.idData = null
+                    this.formState = 'save'
+                    this.openModal = true
+                }
             },
             confirmSave() {
                 const title = this.formState == 'edit' ? 'Ubah data?' : 'Simpan data?'

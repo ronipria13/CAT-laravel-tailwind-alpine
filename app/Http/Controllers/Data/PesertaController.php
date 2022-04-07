@@ -19,7 +19,9 @@ class PesertaController extends Controller
     public function index()
     {
         //
-        return view('app.data.peserta._index');
+        $total = Peserta::count();
+        $max = 201;
+        return view('app.data.peserta._index', compact('total', 'max'));
     }
 
     /**
@@ -41,6 +43,14 @@ class PesertaController extends Controller
     public function store(Request $request)
     {
         //
+        $total = Peserta::count();
+        $max = 201;
+        if($total >= $max) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Peserta sudah melebihi batas maksimal',
+            ],422);
+        }
         $validation = $request->validate([
             'name' => 'required',
             'no_peserta' => '',

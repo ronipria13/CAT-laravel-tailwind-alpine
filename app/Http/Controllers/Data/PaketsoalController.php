@@ -17,7 +17,9 @@ class PaketsoalController extends Controller
     public function index()
     {
         //
-        return view('app.data.paketsoal._index');
+        $total = Paketsoal::count();
+        $max = 10;
+        return view('app.data.paketsoal._index', compact('total', 'max'));
     }
 
     /**
@@ -39,10 +41,19 @@ class PaketsoalController extends Controller
     public function store(Request $request)
     {
         //
+        $total = Paketsoal::count();
+        $max = 10;
+        if($total >= $max) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Paket soal sudah melebihi batas maksimal',
+            ],422);
+        }
         $request->validate([
             'name' => 'required',
             'desc' => '',
             'type' => 'required',
+            'status' => 'required',
         ]);
 
         $paketsoal = Paketsoal::create([
@@ -50,6 +61,7 @@ class PaketsoalController extends Controller
             'name' => $request->name,
             'desc' => $request->desc,
             'type' => $request->type,
+            'status' => $request->status,
         ]);
 
         return response()->json([
@@ -100,12 +112,14 @@ class PaketsoalController extends Controller
             'name' => 'required',
             'desc' => '',
             'type' => 'required',
+            'status' => 'required',
         ]);
 
         $paketsoal->update([
             'name' => $request->name,
             'desc' => $request->desc,
             'type' => $request->type,
+            'status' => $request->status,
         ]);
 
         return response()->json([

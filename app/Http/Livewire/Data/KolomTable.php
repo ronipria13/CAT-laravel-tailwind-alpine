@@ -60,6 +60,9 @@ class KolomTable extends LivewireDatatable
             Column::name('col_e')
             ->label('E'),
 
+            Column::raw('(SELECT COUNT(*) FROM soalkecermatan WHERE soalkecermatan.kolom_id = kolom.id) AS jml')
+            ->label('Jumlah Soal'),
+
             Column::callback('id', function ($id) {
                 $editAction = "editData('".$id."')";
                 $deleteAction = "confirmDelete('".$id."')";
