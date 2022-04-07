@@ -148,7 +148,7 @@
             
             async deleteData() {
                 try {
-                    const response = await axios.delete('/data/kolom/'+this.idData);
+                    const response = await axios.delete('/data/soalkecermatan/'+this.idData);
                     if(response.status == 200) {
                     
                         Swal.fire({

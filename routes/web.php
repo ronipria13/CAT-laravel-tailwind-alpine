@@ -89,8 +89,8 @@ Route::middleware(['auth','roleplay','isActiveUser'])->group(function () {
         ->where(['paketsoal' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])
         ->parameters(['paketsoal' => 'paketsoal']);
 
-        Route::get('/kolom/showall', [App\Http\Controllers\Data\KolomController::class, 'showall']);
         Route::get('/paketsoal/kolom/{id}', [App\Http\Controllers\Data\KolomController::class, 'index']);
+        Route::get('/kolom/showall', [App\Http\Controllers\Data\KolomController::class, 'showall']);
         Route::resource('/kolom', App\Http\Controllers\Data\KolomController::class)->except(['create','edit'])
         ->where(['kolom' => '[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}'])
         ->parameters(['kolom' => 'kolom']);

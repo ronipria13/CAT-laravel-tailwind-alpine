@@ -129,5 +129,10 @@ class SoalkecermatanController extends Controller
     public function destroy(Soalkecermatan $soalkecermatan)
     {
         //
+        $soalkecermatan->delete();
+        return response()->json([
+            'success' => true,
+            'message' => 'Soal kecermatan berhasil dihapus'
+        ]);
     }
 }

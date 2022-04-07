@@ -48,9 +48,10 @@
             },
             soal_list: {!! $latihan->soal_list !!},
             counter(){
-                setInterval(() => {
+                return setInterval(() => {
                     if(this.timer < 0){
                         this.timeup()
+                        clearInterval(this.counter)
                     }
                     let hours = Math.floor(this.timer / (60 * 60));
                     let minutes = Math.floor((this.timer % (60 * 60)) /60 );
@@ -62,7 +63,7 @@
                     let devidedTimer = Math.floor(this.timer / 60); //timer dibagi 60
                     let kolomLength = this.soal_list.length; //jumlah kolom
                     devidedTimer = devidedTimer > kolomLength ? kolomLength : devidedTimer;
-                    let expectCol = Math.floor(kolomLength - devidedTimer) - 1; //kolom yang harus dikerjakan pada saat ini
+                    let expectCol = Math.floor(kolomLength - devidedTimer); //kolom yang harus dikerjakan pada saat ini
                     console.log(devidedTimer, kolomLength, expectCol);
 
                     if(seconds == 0 && expectCol > this.currentIndex.kolom){ // jika sudah tepat 60 detik dan masih ada waktu
