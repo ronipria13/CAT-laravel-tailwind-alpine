@@ -79,7 +79,8 @@ class RiwayatController extends Controller
             }
             $soalTerjawab = ($jmlSoal - $tidakJawab);
             $kecepatan = $jmlSoal == $tidakJawab ? "-" : number_format(($seconds / $soalTerjawab),2,',','.') . " detik/soal";
-            $score = number_format((($scoreB - $scoreS / 500) * 0.3),2,',','.');
+            $score = ((($scoreB + $scoreS) / 500) * 30);
+            $score = number_format($score,2,',','.');
             $stats = [
                 'lamaPengerjaan' => $lamaPengerjaan,
                 'jumlahSoal' => $jmlSoal,

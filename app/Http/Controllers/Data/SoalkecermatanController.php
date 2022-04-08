@@ -12,6 +12,10 @@ use App\Models\Data\Paketsoal;
 class SoalkecermatanController extends Controller
 {
     /**
+     * maximum soal per kolom
+     */
+    protected $max = 50;
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -29,7 +33,9 @@ class SoalkecermatanController extends Controller
         }
         $kolom = Kolom::findorfail($id);
         $paketsoal = Paketsoal::findorfail($kolom->paketsoal_id);
-        return view('app.data.soalkecermatan._index', compact('kolom','paketsoal'));
+        $total = Soalkecermatan::where('kolom_id',$id)->count();
+        $max = $this->max;
+        return view('app.data.soalkecermatan._index', compact('kolom','paketsoal','total','max'));
     }
 
     /**
@@ -51,6 +57,15 @@ class SoalkecermatanController extends Controller
     public function store(Request $request)
     {
         //
+        
+        $total = Soalkecermatan::where('kolom_id',$request->kolom_id)->count();
+        $max = $this->max;
+        if($total >= $max) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Soal sudah melebihi batas maksimal',
+            ],422);
+        }
         $validation = $request->validate([
             'paketsoal_id' => 'required|uuid',
             'kolom_id' => 'required|uuid',

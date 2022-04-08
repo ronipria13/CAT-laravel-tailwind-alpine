@@ -38,7 +38,9 @@ class RiwayatTable extends LivewireDatatable
     {
         //
         return [
-            Column::name('paketsoal.name')
+            Column::callback(['paketsoal.name','paketsoal.desc'],function($name,$desc){
+                return '<p class="font-bold text-gray-50">'.$name.'</p><p class="text-sm text-gray-50">'.$desc."</p>";
+            })
             ->label('Paket Soal')
             ->searchable(),
 
@@ -52,6 +54,11 @@ class RiwayatTable extends LivewireDatatable
 
 
             Column::callback('latihan.start_at', function ($start_at) {
+                $jam = Carbon::parse($start_at)->diffInHours();
+                if($jam > 24) {
+                    return Carbon::parse($start_at)->format('d M Y H:i');
+                }
+                else
                 return Carbon::createFromFormat('Y-m-d H:i:s', $start_at)->diffForHumans();
             })
             ->label('Waktu'),

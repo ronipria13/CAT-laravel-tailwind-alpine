@@ -33,10 +33,12 @@ class SoalkecermatanController extends Controller
      */
     public function store(Paketsoal $paketsoal)
     {
-        $paketsoal = $paketsoal->with('kolom', 'soalkecermatan')->get()->toArray();
+        $rawPaketsoal = $paketsoal->load('kolom', 'soalkecermatan');
+        $paketsoal = $rawPaketsoal->toArray();
+        // dd($paketsoal);
         $dataPeserta = Peserta::where('user_id', auth()->user()->id)->firstOrFail();
         $soallist = [];
-        foreach($paketsoal[0]['kolom'] as $kolom){
+        foreach($paketsoal['kolom'] as $kolom){
             $col = [];
             $col['id'] = $kolom['id'];
             $col['col_a'] = trim($kolom['col_a']);
@@ -44,7 +46,7 @@ class SoalkecermatanController extends Controller
             $col['col_c'] = trim($kolom['col_c']);
             $col['col_d'] = trim($kolom['col_d']);
             $col['col_e'] = trim($kolom['col_e']);
-            foreach($paketsoal[0]['soalkecermatan'] as $soal){
+            foreach($paketsoal['soalkecermatan'] as $soal){
                 if($soal['kolom_id'] == $kolom['id']){
                     $soalcol = [];
                     $soalcol['id'] = $soal['id'];
@@ -57,7 +59,7 @@ class SoalkecermatanController extends Controller
 
         $latihan = Latihan::create([
             'id' => Str::uuid()->toString(),
-            'paketsoal_id' => $paketsoal[0]['id'],
+            'paketsoal_id' => $paketsoal['id'],
             'peserta_id' => $dataPeserta->id,
             'start_at' => now(),
             'end_at' => now()->addMinutes(10),

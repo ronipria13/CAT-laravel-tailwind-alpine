@@ -11,6 +11,10 @@ use App\Http\Controllers\Controller;
 class KolomController extends Controller
 {
     /**
+     * maximum kolom per paketsoal
+     */
+    protected $max = 10;
+    /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
@@ -27,7 +31,9 @@ class KolomController extends Controller
             ] ,$code);
         }
         $paketsoal = Paketsoal::findorfail($id);
-        return view('app.data.kolom._index', compact('paketsoal'));
+        $total = Kolom::where('paketsoal_id',$id)->count();
+        $max = $this->max;
+        return view('app.data.kolom._index', compact('paketsoal','total','max'));
     }
 
     /**
@@ -49,13 +55,22 @@ class KolomController extends Controller
     public function store(Request $request)
     {
         //
+        
+        $total = Kolom::where('paketsoal_id',$request->paketsoal_id)->count();
+        $max = $this->max;
+        if($total >= $max) {
+            return response()->json([
+                'status' => false,
+                'message' => 'Kolom sudah melebihi batas maksimal',
+            ],422);
+        }
         $validation = $request->validate([
             'paketsoal_id' => 'required|uuid',
-            'col_a' => 'required|max:9|numeric',
-            'col_b' => 'required|max:9|numeric',
-            'col_c' => 'required|max:9|numeric',
-            'col_d' => 'required|max:9|numeric',
-            'col_e' => 'required|max:9|numeric',
+            'col_a' => 'required|max:5',
+            'col_b' => 'required|max:5',
+            'col_c' => 'required|max:5',
+            'col_d' => 'required|max:5',
+            'col_e' => 'required|max:5',
         ]);
 
         $kolom = Kolom::create([
@@ -114,11 +129,11 @@ class KolomController extends Controller
         //
         $validation = $request->validate([
             'paketsoal_id' => 'required|uuid',
-            'col_a' => 'required|max:9|numeric',
-            'col_b' => 'required|max:9|numeric',
-            'col_c' => 'required|max:9|numeric',
-            'col_d' => 'required|max:9|numeric',
-            'col_e' => 'required|max:9|numeric',
+            'col_a' => 'required|max:5',
+            'col_b' => 'required|max:5',
+            'col_c' => 'required|max:5',
+            'col_d' => 'required|max:5',
+            'col_e' => 'required|max:5',
         ]);
 
 

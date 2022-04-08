@@ -5,6 +5,8 @@
             openModal : false,
             formState : 'save',
             idData : null,
+            totalData : {{ $total }},
+            maxData: {{ $max }},
             paketsoal_id: "{{ $paketsoal->id }}",
             successAlert: {
                 open: false,
@@ -30,10 +32,21 @@
                 col_e: '',
             },
             addData() {
-                this.resetForm()
-                this.idData = null
-                this.formState = 'save'
-                this.openModal = true
+                
+                if(this.totalData >= this.maxData) {
+                    Swal.fire({
+                        icon: 'warning',
+                        title: "Kolom sudah mencapai batas maksimal",
+                        showConfirmButton: false,
+                        timer: 1500
+                    })
+                }
+                else{
+                    this.resetForm()
+                    this.idData = null
+                    this.formState = 'save'
+                    this.openModal = true
+                }
             },
             confirmSave() {
                 const title = this.formState == 'edit' ? 'Ubah data?' : 'Simpan data?'
